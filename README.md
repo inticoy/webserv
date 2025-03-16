@@ -115,8 +115,8 @@ classDiagram
 
 ### Environment
 - Our program uses `kqueue` to implement I/O Multiplexing.
-- Therefore, your operating system should compatible with `kqueue`.
-- Tested on macOS (Apple silicon and Intel)
+- Therefore, you need an OS that supports `kqueue`.
+- Tested on macOS (Apple silicon, Intel)
 
 ### Installation
 
@@ -130,14 +130,17 @@ git clone https://github.com/two-three-four-five/webserv.git
 make all
 ```
 
-3. Run
+## Run example
+
 ```bash
 ./webserv [config_file]
 ```
 
+config_file (Optional): 설정 파일 경로 (기본값: `./conf/default.conf`)
+
 ## Usage
 
-```json
+```nginx
 events {
 	worker_connections  1024;
 }
